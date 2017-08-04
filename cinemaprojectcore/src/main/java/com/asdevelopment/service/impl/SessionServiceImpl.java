@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Set;
 
 @Service
+@Transactional
 public class SessionServiceImpl implements SessionService {
 
     @Autowired

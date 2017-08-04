@@ -37,7 +37,7 @@ public class Session {
     @JoinColumn(name = "id_hall")
     private Hall hall;
 
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "sessions")
+    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "sessions")
     private Set<Film> films;
 
     public Session() {

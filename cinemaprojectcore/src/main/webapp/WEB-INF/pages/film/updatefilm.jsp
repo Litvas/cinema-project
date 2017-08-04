@@ -2,10 +2,16 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
+<pre>
+st1.sort(0);
+st1.sort(0, true);
+st1.sort(1, true, "Number");
+</pre>
+
 <h1>Add new employee</h1>
 
 <form:form action="/cinema/updatefilm" method="post" modelAttribute="film">
-    <table>
+    <table id="filmstable">
         <tr hidden="hidden"><form:input path="idFilm" hidden="hidden"/></tr>
         <tr>
             <td>Title</td>
@@ -37,4 +43,8 @@
         </tr>
     </table>
 </form:form>
+
+<script type="text/javascript">
+    var st1 = new SortableTable(document.getElementById("filmstable"));
+</script>
 
