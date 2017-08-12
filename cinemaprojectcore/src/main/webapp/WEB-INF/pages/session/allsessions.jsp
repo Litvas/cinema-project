@@ -24,7 +24,7 @@
 
             <tr>
                 <td>${session.startSession}
-                <img src='<c:url value="/resources/images/blank.png" />'/>
+                <img src=<c:url value=""/> " />
                 </td>
                 <td>${session.endSession}</td>
                 <td>${session.hall}</td>
